@@ -16,3 +16,11 @@ def test_multiplica_correta():
     assert multiplica(3, 4) == 12
     assert multiplica(-2, 3) == -6
     assert multiplica(0, 5) == 0
+
+def test_soma_incorreta():
+    # Testa um caso incorreto para a função soma
+    assert soma(2, 2) != 5
+
+def test_subtrai_incorreta():
+    # Testa um caso incorreto para a função subtrai
+    assert subtrai(5, 3) != 1
