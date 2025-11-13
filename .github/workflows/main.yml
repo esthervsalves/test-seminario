@@ -18,10 +18,9 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Configurar Python
-      # A action 'actions/setup-python' configura o ambiente Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.x' 
+        python-version: '3.x' #usa aversão mais recente do Python 3
 
     - name: Instalar dependências
       # Instala o pytest
