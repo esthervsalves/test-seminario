@@ -24,3 +24,7 @@ def test_soma_incorreta():
 def test_subtrai_incorreta():
     # Testa um caso incorreto para a função subtrai
     assert subtrai(5, 3) != 1
+
+def test_multiplica_incorreta():
+    # Testa um caso incorreto para a função multiplica
+    assert multiplica(2, 3) != 5
