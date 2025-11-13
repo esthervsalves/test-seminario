@@ -1,4 +1,4 @@
-from app import soma, subtrai
+from app import soma, subtrai, multiplica
 
 def test_soma_correta():
     # Testa se a função soma está correta
