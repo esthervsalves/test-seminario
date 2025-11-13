@@ -1,6 +1,4 @@
 name: Testes com Pytest
-
-# Este workflow é acionado em pushes e pull requests para a branch 'main'
 on:
   push:
     branches: [ "main" ]
@@ -14,19 +12,19 @@ jobs:
     # Define os passos 
     steps: 
     - name: Checkout do código
-      # A action  baixa seu código para o runner
+      #  baixa seu código para o runner
       uses: actions/checkout@v4
 
     - name: Configurar Python
-      # A action 'actions/setup-python' configura o ambiente Python
+      # 'actions/setup-python' configura o ambiente Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.x' 
 
     - name: Instalar dependências
-      # Instala o pytest
+      #instala o pytest
       run: pip install pytest
 
     - name: Rodar Testes
-      # Executa os testes usando o pytest
+      #executa os testes usando o pytest
       run: pytest
