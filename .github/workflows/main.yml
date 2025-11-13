@@ -1,0 +1,30 @@
+name: Testes de CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do código
+      # A action 'actions/checkout' baixa seu código para o runner
+      uses: actions/checkout@v4
+
+    - name: Configurar Python
+      # A action 'actions/setup-python' configura o ambiente Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x' 
+
+    - name: Instalar dependências
+      # Instala o pytest
+      run: pip install pytest
+
+    - name: Rodar Testes
+      # Executa os testes usando o pytest
+      run: pytest
