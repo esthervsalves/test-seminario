@@ -1,0 +1,28 @@
+name: lint com flake8
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest #define uma máquina virtual com Ubuntu como ambiente de execução
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v4
+
+    - name: Configurar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x' 
+
+    - name: Instalar Flake8
+      # instala o Flake8, que checa estilo e formatação
+      run: pip install flake8
+
+    - name: Rodar Flake8
+      # Executa o Flake8 no seu código Python
+      run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
+      # o flake8 retorna se encontrar algum erro de sintaxe ou erro grave de estilo
