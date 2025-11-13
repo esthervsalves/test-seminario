@@ -1,5 +1,6 @@
-name: Testes de CI
+name: Testes com Pytest
 
+# Este workflow é acionado em pushes e pull requests para a branch 'main'
 on:
   push:
     branches: [ "main" ]
@@ -10,9 +11,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
+    # Define os passos 
+    steps: 
     - name: Checkout do código
-      # A action 'actions/checkout' baixa seu código para o runner
+      # A action  baixa seu código para o runner
       uses: actions/checkout@v4
 
     - name: Configurar Python
