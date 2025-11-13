@@ -1,4 +1,4 @@
-from app import soma, subtrai, multiplica
+from app import soma, subtrai, multiplica, divide
 
 def test_soma_correta():
     # Testa se a função soma está correta
@@ -25,6 +25,7 @@ def test_subtrai_incorreta():
     # Testa um caso incorreto para a função subtrai
     assert subtrai(5, 3) != 1
 
-def test_multiplica_incorreta():
-    # Testa um caso incorreto para a função multiplica
-    assert multiplica(2, 3) != 5
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Divisão por zero não é permitida.")
+    return a / b

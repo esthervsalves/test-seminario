@@ -1,11 +1,13 @@
 def soma(a, b):
-    """Retorna a soma de dois números."""
     return a + b
 
 def subtrai(a, b):
-    """Retorna a subtração de dois números."""
     return a - b
 
 def multiplica(a, b):
-    """Retorna a multiplicação de dois números."""
     return a * b
+
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Divisão por zero não é permitida.")
+    return a / b
