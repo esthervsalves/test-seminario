@@ -10,3 +10,10 @@ def test_subtrai_correta():
     assert subtrai(5, 2) == 3
     assert subtrai(10, 5) == 5
     assert subtrai(2, 5) == -3
+
+
+def test_muktiplica_correta():
+    # Testa se a função multiplica está correta
+    assert multiplica(3, 4) == 12
+    assert multiplica(-2, 3) == -6
+    assert multiplica(0, 5) == 0

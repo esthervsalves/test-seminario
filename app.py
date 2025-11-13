@@ -5,3 +5,7 @@ def soma(a, b):
 def subtrai(a, b):
     """Retorna a subtração de dois números."""
     return a - b
+
+def multiplica(a, b):
+    """Retorna a multiplicação de dois números."""
+    return a * b
