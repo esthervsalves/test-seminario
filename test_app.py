@@ -1,4 +1,4 @@
-from app import soma, subtrai
+from app import soma, subtrai, multiplica
 
 def test_soma_correta():
     # Testa se a função soma está correta
@@ -11,8 +11,7 @@ def test_subtrai_correta():
     assert subtrai(10, 5) == 5
     assert subtrai(2, 5) == -3
 
-
-def test_muktiplica_correta():
+def test_multiplica_correta():
     # Testa se a função multiplica está correta
     assert multiplica(3, 4) == 12
     assert multiplica(-2, 3) == -6
